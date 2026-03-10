@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CardioScan — Predição de Risco Cardíaco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+
+<div class="wrapper">
+
+  <header>
+    <div class="logo-pulse">🫀</div>
+    <div class="header-text">
+      <h1>CardioScan</h1>
+      <p>Predição de risco de doença cardíaca via Machine Learning</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <p class="section-label">Dados Clínicos do Paciente</p>
+
+    <div class="form-grid" id="formGrid">
+      <!-- Fields serão gerados dinamicamente -->
+    </div>
+
+    <button class="btn-predict" id="btnPredict" onclick="predict()">
+      <div class="spinner" id="spinner"></div>
+      <span id="btnText">Analisar Risco Cardíaco</span>
+    </button>
+
+    <div class="error-box" id="errorBox"></div>
+
+    <div id="result">
+      <div class="result-header">
+        <div class="result-icon" id="resultIcon"></div>
+        <div>
+          <div class="result-label" id="resultLabel"></div>
+          <div class="result-sub" id="resultSub"></div>
+        </div>
+      </div>
+      <div class="result-body">
+        <div class="prob-row">
+          <span class="prob-label">Probabilidade: Sem Doença</span>
+          <span class="prob-value" id="probNo">—</span>
+        </div>
+        <div class="prob-bar"><div class="prob-fill" id="barNo" style="width:0%"></div></div>
+
+        <div class="prob-row">
+          <span class="prob-label">Probabilidade: Doença Detectada</span>
+          <span class="prob-value" id="probYes">—</span>
+        </div>
+        <div class="prob-bar"><div class="prob-fill" id="barYes" style="width:0%"></div></div>
+
+        <div class="disclaimer">
+          ⚠️ Este sistema é uma ferramenta de apoio acadêmico e <strong>não substitui</strong>
+          avaliação médica profissional. Sempre consulte um cardiologista.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    CardioScan MVP &mdash; Diego Santiago - PUC Rio
+  </footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

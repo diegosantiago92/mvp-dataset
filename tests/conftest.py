@@ -1,0 +1,1 @@
+# conftest.py — Configuração global do PyTest
